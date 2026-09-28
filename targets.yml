@@ -1,0 +1,18 @@
+# Competitor Watch Desk — who to watch
+#
+# Live mode (--live) hits these URLs via Firecrawl v2.
+# Offline fixtures live under fixtures/pages/<id>.json (same ids).
+
+targets:
+  - id: n8n_careers
+    name: n8n Careers
+    url: https://n8n.io/careers
+    kind: careers
+  - id: linear_changelog
+    name: Linear Changelog
+    url: https://linear.app/changelog
+    kind: changelog
+  - id: personio_careers
+    name: Personio Careers
+    url: https://www.personio.com/about-personio/careers/
+    kind: careers

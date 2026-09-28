@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Watch Desk — a short note</title>
+  <style>
+    @font-face { font-family: Geist; src: url("fonts/Geist-Regular.woff2") format("woff2"); font-weight: 400; }
+    @font-face { font-family: Geist; src: url("fonts/Geist-SemiBold.woff2") format("woff2"); font-weight: 600; }
+    @page { margin: 14mm 14mm 16mm; }
+    body { font-family: Geist, sans-serif; margin: 0 auto; max-width: 860px; color: #111; }
+    h1 { font-weight: 600; color: #111; margin: 0 0 8px; font-size: 28px; }
+    h2 { font-weight: 600; color: #0a5f8a; margin: 0 0 8px; font-size: 20px; }
+    p, li { line-height: 1.45; }
+    code { font-family: ui-monospace, monospace; font-size: 0.92em; }
+    .keep { break-inside: avoid; page-break-inside: avoid; }
+    .results { break-before: page; page-break-before: always; }
+    .notes { break-before: page; page-break-before: always; }
+    img { width: 100%; border: 1px solid #e6e6e6; }
+  </style>
+</head>
+<body>
+  <h1>What changed overnight?</h1>
+  <p>We watched three pages with saved sample content. Nothing here calls the live web. First we saved a baseline. A second look found no change. Then we simulated a careers update so the desk could show a real “changed” row.</p>
+  <p>In this run, <b>1</b> page changed and <b>2</b> stayed the same. The desk writes a short report you can open, share, or feed to a weekday morning check.</p>
+  <section class="keep">
+    <img src="images/overview.png" alt="How Watch Desk works">
+  </section>
+  <section class="keep">
+    <img src="images/catalog.png" alt="Who we watch after the baseline">
+  </section>
+  <section class="keep results">
+    <img src="images/results.png" alt="After the simulated change">
+  </section>
+  <section class="notes">
+    <h2>What this is worth</h2>
+    <ul>
+      <li>You stop opening the same careers and changelog tabs every Monday hoping to notice a difference.</li>
+      <li>A change is named in plain language — for example a new role heading — not a wall of HTML.</li>
+      <li>Quiet pages stay quiet. Only the ones that moved need your attention.</li>
+      <li>The same report can later wake Slack, a sheet, or a spoken brief. The judgment stays here.</li>
+    </ul>
+    <p>Run the lab again with <code>python experiments.py</code>. For live pages later, put real links in <code>targets.yml</code> and use <code>python watch.py --live</code>.</p>
+  </section>
+</body>
+</html>

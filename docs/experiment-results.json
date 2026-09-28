@@ -1,0 +1,171 @@
+{
+  "baseline": {
+    "checked_at": "2026-09-28T09:46:05.050448+00:00",
+    "simulate": false,
+    "results": [
+      {
+        "id": "n8n_careers",
+        "name": "n8n Careers",
+        "url": "https://n8n.io/careers",
+        "change": "new",
+        "fingerprint": "dc9062d07aaa338a",
+        "summary": "First snapshot \u2014 no prior baseline.",
+        "headings_diff": {
+          "added": [
+            "Open roles",
+            "Automation Engineer",
+            "Developer Advocate",
+            "Benefits"
+          ],
+          "removed": []
+        }
+      },
+      {
+        "id": "linear_changelog",
+        "name": "Linear Changelog",
+        "url": "https://linear.app/changelog",
+        "change": "new",
+        "fingerprint": "5f30284f1babedd2",
+        "summary": "First snapshot \u2014 no prior baseline.",
+        "headings_diff": {
+          "added": [
+            "September 2026",
+            "Project updates",
+            "Keyboard shortcuts"
+          ],
+          "removed": []
+        }
+      },
+      {
+        "id": "personio_careers",
+        "name": "Personio Careers",
+        "url": "https://www.personio.com/about-personio/careers/",
+        "change": "new",
+        "fingerprint": "03f03b549c442cea",
+        "summary": "First snapshot \u2014 no prior baseline.",
+        "headings_diff": {
+          "added": [
+            "Open roles",
+            "Revenue Operations",
+            "CRM Specialist",
+            "Life at Personio"
+          ],
+          "removed": []
+        }
+      }
+    ],
+    "changed_count": 0,
+    "new_count": 3
+  },
+  "after_baseline": {
+    "checked_at": "2026-09-28T09:46:05.086481+00:00",
+    "simulate": false,
+    "results": [
+      {
+        "id": "n8n_careers",
+        "name": "n8n Careers",
+        "url": "https://n8n.io/careers",
+        "change": "unchanged",
+        "fingerprint": "dc9062d07aaa338a",
+        "summary": "No material change.",
+        "headings_diff": {
+          "added": [],
+          "removed": []
+        }
+      },
+      {
+        "id": "linear_changelog",
+        "name": "Linear Changelog",
+        "url": "https://linear.app/changelog",
+        "change": "unchanged",
+        "fingerprint": "5f30284f1babedd2",
+        "summary": "No material change.",
+        "headings_diff": {
+          "added": [],
+          "removed": []
+        }
+      },
+      {
+        "id": "personio_careers",
+        "name": "Personio Careers",
+        "url": "https://www.personio.com/about-personio/careers/",
+        "change": "unchanged",
+        "fingerprint": "03f03b549c442cea",
+        "summary": "No material change.",
+        "headings_diff": {
+          "added": [],
+          "removed": []
+        }
+      }
+    ],
+    "changed_count": 0,
+    "new_count": 0
+  },
+  "after_simulate": {
+    "checked_at": "2026-09-28T09:46:05.127054+00:00",
+    "simulate": true,
+    "results": [
+      {
+        "id": "n8n_careers",
+        "name": "n8n Careers",
+        "url": "https://n8n.io/careers",
+        "change": "changed",
+        "fingerprint": "9889bce8dad709e8",
+        "summary": "added: GTM Engineer",
+        "headings_diff": {
+          "added": [
+            "GTM Engineer"
+          ],
+          "removed": []
+        },
+        "body_excerpt": "n8n is hiring an Automation Engineer, a GTM Engineer, and a Developer Advocate. Berlin and remote options."
+      },
+      {
+        "id": "linear_changelog",
+        "name": "Linear Changelog",
+        "url": "https://linear.app/changelog",
+        "change": "unchanged",
+        "fingerprint": "5f30284f1babedd2",
+        "summary": "No material change.",
+        "headings_diff": {
+          "added": [],
+          "removed": []
+        }
+      },
+      {
+        "id": "personio_careers",
+        "name": "Personio Careers",
+        "url": "https://www.personio.com/about-personio/careers/",
+        "change": "unchanged",
+        "fingerprint": "03f03b549c442cea",
+        "summary": "No material change.",
+        "headings_diff": {
+          "added": [],
+          "removed": []
+        }
+      }
+    ],
+    "changed_count": 1,
+    "new_count": 0
+  },
+  "plain": [
+    {
+      "name": "n8n Careers",
+      "change": "changed",
+      "why": "Something on the page changed.",
+      "summary": "added: GTM Engineer"
+    },
+    {
+      "name": "Linear Changelog",
+      "change": "unchanged",
+      "why": "No material change since the last look.",
+      "summary": "No material change."
+    },
+    {
+      "name": "Personio Careers",
+      "change": "unchanged",
+      "why": "No material change since the last look.",
+      "summary": "No material change."
+    }
+  ]
+}

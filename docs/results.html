@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Watch Desk lab</title>
+  <style>
+    @font-face { font-family: Geist; src: url("fonts/Geist-Regular.woff2") format("woff2"); font-weight: 400; }
+    @font-face { font-family: Geist; src: url("fonts/Geist-SemiBold.woff2") format("woff2"); font-weight: 600; }
+    body { font-family: Geist, sans-serif; margin: 28px auto; max-width: 980px; color: #111; background: #fff; }
+    h1 { font-weight: 600; font-size: 28px; margin-bottom: 4px; color: #111; }
+    h2 { font-weight: 600; font-size: 20px; margin-top: 28px; color: #0a5f8a; }
+    p { line-height: 1.45; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid #e6e6e6; font-size: 14px; }
+    th { background: #0a5f8a; color: white; font-weight: 600; }
+    .changed { color: #b85a00; font-weight: 600; }
+    .new { color: #0a5f8a; font-weight: 600; }
+    .ok { color: #067a3a; font-weight: 600; }
+    .tiles { display: flex; gap: 16px; margin: 16px 0 8px; }
+    .tile { background: #f0f7fb; padding: 16px 20px; min-width: 140px; border-top: 4px solid #0a5f8a; }
+    .tile b { display: block; font-size: 28px; }
+</style>
+</head>
+<body>
+<h2 id="results">After the simulated change</h2>
+  <table>
+    <thead><tr><th>Name</th><th>Address</th><th>Decision</th><th>What we saw</th></tr></thead>
+    <tbody>
+      <tr><td>n8n Careers</td><td>n8n.io/careers</td><td class='changed'>Changed</td><td>added: GTM Engineer</td></tr><tr><td>Linear Changelog</td><td>linear.app/changelog</td><td class='ok'>Unchanged</td><td>No material change.</td></tr><tr><td>Personio Careers</td><td>www.personio.com/about-personio/careers/</td><td class='ok'>Unchanged</td><td>No material change.</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

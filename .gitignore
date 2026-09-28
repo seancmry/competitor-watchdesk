@@ -1,0 +1,9 @@
+.env
+__pycache__/
+.venv/
+node_modules/
+*.pyc
+.DS_Store
+out/*
+!out/.gitkeep
+data/snapshots.json

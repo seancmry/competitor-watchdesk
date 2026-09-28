@@ -1,0 +1,4 @@
+httpx>=0.27.0
+PyYAML>=6.0
+# Optional — lab screenshots + PDF (scripts/make_lab_pdf.py)
+# playwright>=1.40.0
