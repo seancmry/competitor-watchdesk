@@ -1,22 +1,16 @@
-# Watch Desk
+# Watch desk
 
-## The problem
+It watches the pages listed in `targets.yml`, saves a snapshot, and compares the next look to that snapshot. The snapshot is the title, the headings, and a short excerpt. An unchanged page stays quiet. A material change is written into a short report: what was added, what was removed, and one line on what moved.
 
-Competitor careers, pricing, and changelog pages matter — but opening the same tabs every Monday does not scale. You either miss a change, or you waste time when nothing moved.
+A saved sample stands in for the live web, so you can run it with no account. The sample targets are n8n Careers, Linear Changelog, and Personio Careers.
 
-**What this program does:** it watches the pages you pick, saves a snapshot, looks again later, and writes a short report in plain language. Quiet when nothing changed; clear when something did. A saved sample stands in for the live web, so you can try it with no account.
+Someone who tracks a few competitor careers, pricing, or changelog pages uses this instead of opening the same tabs every week.
 
-![Spot competitor page changes without a tab graveyard](docs/images/overview.png)
+![Spot competitor page changes without opening the same tabs](docs/images/overview.png)
 
-## Who it helps
+## Run it
 
-- GTM / sales / product people who track a few competitor pages  
-- Ops folks tired of “tab graveyards” and manual Monday checks  
-- Engineers wiring a lightweight watch job before building a bigger system  
-
-## How to run
-
-**Offline lab** (recommended first):
+**Offline lab:**
 
 ```bash
 python3 -m venv .venv
@@ -25,7 +19,7 @@ pip install -r requirements.txt
 python experiments.py
 ```
 
-It seeds a baseline, checks again (unchanged), then runs a simulated careers change.
+It takes a baseline, checks again (nothing changed), then runs a simulated careers change.
 
 ![Who we watch after the baseline](docs/images/catalog.png)
 
@@ -33,7 +27,7 @@ It seeds a baseline, checks again (unchanged), then runs a simulated careers cha
 
 Lab PDF: [docs/watchdesk-lab.pdf](docs/watchdesk-lab.pdf).
 
-**Day-to-day offline:**
+**The same three steps on their own:**
 
 ```bash
 python watch.py --reset --seed
@@ -41,7 +35,9 @@ python watch.py
 python watch.py --simulate
 ```
 
-### Optional: live crawl
+`--seed` writes the baseline and does not call it a change. `--simulate` pretends the n8n careers page added a role.
+
+### Live crawl
 
 Edit `targets.yml`, put `FIRECRAWL_API_KEY` in `.env`, then:
 
@@ -50,9 +46,7 @@ python watch.py --reset --seed --live
 python watch.py --live
 ```
 
-Default sample targets: n8n Careers, Linear Changelog, Personio Careers.
-
-### Rebuild lab screenshots / PDF
+### Rebuild the lab screenshots and PDF
 
 ```bash
 pip install playwright
@@ -60,16 +54,15 @@ playwright install chromium
 python scripts/make_lab_pdf.py
 ```
 
----
+## Inputs
 
-## What the words mean
-
-| Word | What it means |
+| Input | What the watch does with it |
 | --- | --- |
-| **Target** | One page you care about (careers, pricing, changelog). |
-| **Snapshot** | Last title, headings, and short excerpt we saved. |
-| **Changed** | Something material moved since the last look. |
-| **Unchanged** | No material change — leave it alone. |
-| **Simulated change** | Offline demo that pretends a careers page added a role. |
+| `targets.yml` | The pages: id, name, url, and kind (careers, pricing, changelog). |
+| `fixtures/pages/` | Saved extracts for the offline run. |
+| `fixtures/pages-next/` | The "next morning" extracts used by `--simulate`. |
+| `data/snapshots.json` | Last snapshot per target. The first run treats every page as new. |
+| `--live` | Fetch with Firecrawl. Needs `FIRECRAWL_API_KEY`. |
+| `out/diff-*.json` | The report for that run. |
 
-Full field list: `VARIABLE_SCHEMA.md`.
+Each row is `new`, `changed`, or `unchanged`. Details are in `VARIABLE_SCHEMA.md`.
